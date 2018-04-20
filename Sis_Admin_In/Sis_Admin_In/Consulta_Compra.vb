@@ -127,4 +127,5 @@ Public Class Consulta_Compra
     Private Sub Consulta_Compra_Disposed(sender As Object, e As EventArgs) Handles Me.Disposed
         conexionsql.Close()
     End Sub
+
 End Class

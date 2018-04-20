@@ -39,16 +39,18 @@ Partial Class Principal
         Me.ErroresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoricoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lbl_portada = New System.Windows.Forms.Label()
+        Me.ExportarAExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ms_menu.SuspendLayout()
         Me.SuspendLayout()
         '
         'ms_menu
         '
         Me.ms_menu.Font = New System.Drawing.Font("Segoe UI", 20.0!)
-        Me.ms_menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CatalogosToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.UtileriaToolStripMenuItem})
+        Me.ms_menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CatalogosToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.UtileriaToolStripMenuItem, Me.ExportarAExcelToolStripMenuItem})
         Me.ms_menu.Location = New System.Drawing.Point(0, 0)
         Me.ms_menu.Name = "ms_menu"
-        Me.ms_menu.Size = New System.Drawing.Size(767, 45)
+        Me.ms_menu.Size = New System.Drawing.Size(867, 45)
         Me.ms_menu.TabIndex = 0
         Me.ms_menu.Text = "MenuStrip1"
         '
@@ -120,7 +122,7 @@ Partial Class Principal
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(133, 41)
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(134, 41)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'UtileriaToolStripMenuItem
@@ -134,19 +136,19 @@ Partial Class Principal
         'RespaldoYRestauracionToolStripMenuItem
         '
         Me.RespaldoYRestauracionToolStripMenuItem.Name = "RespaldoYRestauracionToolStripMenuItem"
-        Me.RespaldoYRestauracionToolStripMenuItem.Size = New System.Drawing.Size(383, 42)
+        Me.RespaldoYRestauracionToolStripMenuItem.Size = New System.Drawing.Size(385, 42)
         Me.RespaldoYRestauracionToolStripMenuItem.Text = "Respaldo Y Restauracion"
         '
         'ErroresToolStripMenuItem
         '
         Me.ErroresToolStripMenuItem.Name = "ErroresToolStripMenuItem"
-        Me.ErroresToolStripMenuItem.Size = New System.Drawing.Size(383, 42)
+        Me.ErroresToolStripMenuItem.Size = New System.Drawing.Size(385, 42)
         Me.ErroresToolStripMenuItem.Text = "Bitacora"
         '
         'HistoricoToolStripMenuItem
         '
         Me.HistoricoToolStripMenuItem.Name = "HistoricoToolStripMenuItem"
-        Me.HistoricoToolStripMenuItem.Size = New System.Drawing.Size(383, 42)
+        Me.HistoricoToolStripMenuItem.Size = New System.Drawing.Size(385, 42)
         Me.HistoricoToolStripMenuItem.Text = "Historico"
         '
         'lbl_portada
@@ -156,16 +158,29 @@ Partial Class Principal
         Me.lbl_portada.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.lbl_portada.Location = New System.Drawing.Point(0, 45)
         Me.lbl_portada.Name = "lbl_portada"
-        Me.lbl_portada.Size = New System.Drawing.Size(767, 361)
+        Me.lbl_portada.Size = New System.Drawing.Size(867, 361)
         Me.lbl_portada.TabIndex = 1
         Me.lbl_portada.Text = "Administrador De Inventario De Refaccionaria"
+        '
+        'ExportarAExcelToolStripMenuItem
+        '
+        Me.ExportarAExcelToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem})
+        Me.ExportarAExcelToolStripMenuItem.Name = "ExportarAExcelToolStripMenuItem"
+        Me.ExportarAExcelToolStripMenuItem.Size = New System.Drawing.Size(215, 41)
+        Me.ExportarAExcelToolStripMenuItem.Text = "Exportar a Excel"
+        '
+        'VentasToolStripMenuItem
+        '
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(174, 42)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.ClientSize = New System.Drawing.Size(767, 406)
+        Me.ClientSize = New System.Drawing.Size(867, 406)
         Me.Controls.Add(Me.lbl_portada)
         Me.Controls.Add(Me.ms_menu)
         Me.KeyPreview = True
@@ -198,4 +213,6 @@ Partial Class Principal
     Friend WithEvents RespaldoYRestauracionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ErroresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistoricoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExportarAExcelToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
 End Class

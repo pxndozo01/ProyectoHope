@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Inicio_Sesion
-    Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
+    'Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
     Private Sub Inicio_Sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load

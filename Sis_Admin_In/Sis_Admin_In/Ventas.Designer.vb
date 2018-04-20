@@ -103,7 +103,7 @@ Partial Class Ventas
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(262, 63)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 20)
+        Me.Label4.Size = New System.Drawing.Size(71, 20)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Telefono:"
         '
@@ -366,7 +366,7 @@ Partial Class Ventas
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(6, 22)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 20)
+        Me.Label5.Size = New System.Drawing.Size(73, 20)
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "No.Venta:"
         '
@@ -459,7 +459,7 @@ Partial Class Ventas
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(601, 425)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(45, 20)
+        Me.Label13.Size = New System.Drawing.Size(46, 20)
         Me.Label13.TabIndex = 28
         Me.Label13.Text = "Total:"
         '

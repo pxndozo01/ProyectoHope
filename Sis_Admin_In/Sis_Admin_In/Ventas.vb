@@ -3,7 +3,7 @@ Imports System.Configuration
 Public Class Ventas
 
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Using Conexion As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
+        Using Conexion As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
             Using Adaptador As New SqlDataAdapter("EMPLE", Conexion)
                 Adaptador.SelectCommand.CommandType = CommandType.StoredProcedure
                 Dim Data As New DataSet
@@ -40,7 +40,7 @@ Public Class Ventas
     End Sub
 
     Private Sub cb_empleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_empleado.SelectedIndexChanged
-        Using Conexion As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
+        Using Conexion As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
             Using comando As New SqlCommand
                 comando.Connection = Conexion
                 Try
@@ -75,7 +75,7 @@ Public Class Ventas
     End Sub
 
     Private Sub cb_articulo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_articulo.SelectedIndexChanged
-        Using Conexion As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
+        Using Conexion As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
             Using comando As New SqlCommand
                 comando.Connection = Conexion
                 comando.CommandType = CommandType.StoredProcedure
@@ -154,7 +154,7 @@ Public Class Ventas
     End Sub
 
     Private Sub btn_nuevo_Click(sender As Object, e As EventArgs) Handles btn_nuevo.Click
-        Using Conexion As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
+        Using Conexion As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
             Using comando As New SqlCommand
                 comando.Connection = Conexion
                 Conexion.Open()
@@ -190,7 +190,7 @@ Public Class Ventas
     End Sub
 
     Private Sub btn_grabar_Click(sender As Object, e As EventArgs) Handles btn_grabar.Click
-        Using Conexion As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
+        Using Conexion As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
             Using comando As New SqlCommand
                 Conexion.Open()
                 comando.Connection = Conexion

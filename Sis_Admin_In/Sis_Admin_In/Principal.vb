@@ -64,4 +64,8 @@
     Private Sub HistoricoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoricoToolStripMenuItem.Click
         Historico.ShowDialog()
     End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
+        frmVentasExcel.ShowDialog()
+    End Sub
 End Class
