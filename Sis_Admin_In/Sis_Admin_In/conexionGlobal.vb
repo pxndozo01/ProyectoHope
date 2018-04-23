@@ -37,7 +37,8 @@ Module conexionGlobal
             For i As Integer = 0 To NCol - 1
 
                 If (ElGrid.Columns(i).Visible = True) Then
-                    exHoja.Cells.Item(1, cont) = ElGrid.Columns(i).Name.ToString
+                    exHoja.Cells.Item(1, cont) = ElGrid.Columns(i).HeaderText
+
                     cont += 1
                 End If
 

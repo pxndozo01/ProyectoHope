@@ -103,11 +103,9 @@ Public Class frmVentasExcel
         Dim seleccionado As Boolean = dgTablas.Rows(e.RowIndex).Cells(2).Value
 
         If (seleccionado) Then
-            MsgBox(seleccionado)
             MessageBox.Show("UnChecked", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Dim terminacion As String = dgTablas.Rows(e.RowIndex).Cells(0).Value
             Dim nombreCampo As String = dgTablas.Rows(e.RowIndex).Cells(1).Value + terminacion.Chars(0)
-            MsgBox(nombreCampo)
 
             '    'dgFinal.Columns.Remove(nombreCampo)
             dgFinal.Columns(nombreCampo).Visible = False
@@ -115,7 +113,6 @@ Public Class frmVentasExcel
 
 
         Else
-            MsgBox(seleccionado)
             MessageBox.Show("The Value is Checked", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Dim col As New DataGridViewTextBoxColumn
             Dim terminacion As String = dgTablas.Rows(e.RowIndex).Cells(0).Value
