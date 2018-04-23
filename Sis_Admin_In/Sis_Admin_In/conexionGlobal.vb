@@ -32,18 +32,24 @@ Module conexionGlobal
             'Aqui recorremos todas las filas, y por cada fila todas las columnas
 
             'y vamos escribiendo.
+            Dim cont As Integer = 1
 
-            For i As Integer = 1 To NCol
+            For i As Integer = 0 To NCol - 1
 
-                exHoja.Cells.Item(1, i) = ElGrid.Columns(i - 1).Name.ToString
+                If (ElGrid.Columns(i).Visible = True) Then
+                    exHoja.Cells.Item(1, cont) = ElGrid.Columns(i).Name.ToString
+                    cont += 1
+                End If
 
             Next
 
             For Fila As Integer = 0 To NRow - 1
-
                 For Col As Integer = 0 To NCol - 1
+                    If (ElGrid.Rows(0).Cells(Col).Visible) Then
+                        exHoja.Cells.Item(Fila + 2, Col + 1) = ElGrid.Item(Col, Fila).Value
 
-                    exHoja.Cells.Item(Fila + 2, Col + 1) = ElGrid.Item(Col, Fila).Value
+                    End If
+
 
                 Next
 

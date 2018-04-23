@@ -10,36 +10,58 @@ Public Class frmVentasExcel
 
             conexionRemota.Open()
             comandoRemoto.CommandText = "SELECT
-                                          t.name, c.name, ti.name, c.max_length
-                                        FROM
-                                          sys.tables t left join
-                                          sys.all_columns c on (c.object_id = t.object_id) left join
-                                          sys.types ti on (c.system_type_id = ti.system_type_id)
-                                        WHERE NOT t.name ='PROVEEDOR' AND NOT t.name ='COMPRA' AND NOT t.name ='DETALLECOMPRA' AND NOT t.name ='USUARIOS' ORDER BY t.name DESC;"
+		                                    t.name, c.name, ti.name, c.max_length
+	                                    FROM
+		                                    sys.tables t left join
+		                                    sys.all_columns c on (c.object_id = t.object_id) left join
+		                                    sys.types ti on (c.system_type_id = ti.system_type_id)
+	                                    WHERE 
+		                                    NOT t.name ='PROVEEDOR' 
+		                                    AND NOT t.name ='COMPRA' 
+		                                    AND NOT t.name ='DETALLECOMPRA' 
+		                                    AND NOT t.name ='USUARIOS' 
+		                                    AND NOT c.name ='idProducto' 
+		                                    AND NOT c.name ='idEmpleado'
+		                                    AND NOT c.name ='idVenta'
+		                                    AND NOT c.name ='costo'
+		                                    AND NOT c.name ='ciudad'
+		                                    AND NOT c.name ='colonia'
+		                                    AND NOT c.name ='telefono'
+		                                    AND NOT c.name ='nacimiento'
+		                                    AND NOT c.name ='sexo'
+		                                    AND NOT c.name ='existencas'
+		                                    AND NOT c.name ='minimo'
+		                                    AND NOT c.name ='maximmo'
+		                                    AND NOT c.name ='direccion'
+	                                    ORDER BY t.name DESC;"
             lectorRemoto = comandoRemoto.ExecuteReader
             While lectorRemoto.Read
-                dgTablas.Rows.Add(lectorRemoto(0), lectorRemoto(1), lectorRemoto(2), lectorRemoto(3))
+                dgTablas.Rows.Add(lectorRemoto(0), lectorRemoto(1))
             End While
 
             lectorRemoto.Close()
 
 
-            comandoRemoto.CommandText = "SELECT * FROM VENTA 
-                                                  INNER JOIN DETALLEVENTA ON VENTA.idVenta = DETALLEVENTA.idVenta 
-                                                  INNER JOIN PRODUCTO ON PRODUCTO.idProducto = DETALLEVENTA.idProducto 
-                                                  INNER JOIN EMPLEADO ON EMPLEADO.idEmpleado = VENTA.idEmpleado 
-                                                  ORDER BY VENTA.idVenta ASC;"
+            comandoRemoto.CommandText = "SELECT  
+	                                        v.idVenta,   e.nombre,
+	                                        v.fecha,     p.nombre,
+	                                        dv.Cantidad, dv.Precio,
+	                                        p.marca,     p.unidad,
+	                                        v.total
+                                        FROM VENTA v 
+	                                        INNER JOIN DETALLEVENTA dv ON v.idVenta = dv.idVenta 
+                                            INNER JOIN PRODUCTO p ON p.idProducto = dv.idProducto 
+	                                        INNER JOIN EMPLEADO e ON e.idEmpleado = v.idEmpleado 
+                                        ORDER BY v.idVenta ASC;"
             lectorRemoto = comandoRemoto.ExecuteReader
             While lectorRemoto.Read
-                dgFinal.Rows.Add(lectorRemoto(0), lectorRemoto(1), lectorRemoto(2), lectorRemoto(3), lectorRemoto(4), lectorRemoto(5),
-                                 lectorRemoto(6), lectorRemoto(7), lectorRemoto(8), lectorRemoto(9), lectorRemoto(10), lectorRemoto(11),
-                                 lectorRemoto(12), lectorRemoto(13), lectorRemoto(14), lectorRemoto(15), lectorRemoto(16), lectorRemoto(17),
-                                 lectorRemoto(18), lectorRemoto(19), lectorRemoto(20), lectorRemoto(21), lectorRemoto(22), lectorRemoto(23))
+                dgFinal.Rows.Add(lectorRemoto(0), lectorRemoto(1), lectorRemoto(2),
+                                 lectorRemoto(3), lectorRemoto(4), lectorRemoto(5),
+                                 lectorRemoto(6), lectorRemoto(7), lectorRemoto(8))
             End While
 
             lectorRemoto.Close()
 
-            Dim s As Integer
             Dim t As Integer
 
 
@@ -66,9 +88,11 @@ Public Class frmVentasExcel
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
 
         If contador > 0 Then
+            dgFinal.Columns(0).Visible = True
             llenarExcel(dgFinal)
+
         Else
-            MsgBox("NO SE HAN SELECCIONADO CAMPOS PARA LA CONSULTA")
+                MsgBox("NO SE HAN SELECCIONADO CAMPOS PARA LA CONSULTA")
         End If
 
 
@@ -76,7 +100,7 @@ Public Class frmVentasExcel
     End Sub
 
     Private Sub dgTablas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgTablas.CellContentClick
-        Dim seleccionado As Boolean = dgTablas.Rows(e.RowIndex).Cells(4).Value
+        Dim seleccionado As Boolean = dgTablas.Rows(e.RowIndex).Cells(2).Value
 
         If (seleccionado) Then
             MsgBox(seleccionado)
@@ -87,6 +111,8 @@ Public Class frmVentasExcel
 
             '    'dgFinal.Columns.Remove(nombreCampo)
             dgFinal.Columns(nombreCampo).Visible = False
+
+
 
         Else
             MsgBox(seleccionado)
