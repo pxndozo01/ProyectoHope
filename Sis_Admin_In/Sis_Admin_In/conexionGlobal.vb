@@ -43,16 +43,16 @@ Module conexionGlobal
 
             Next
 
+
             For Fila As Integer = 0 To NRow - 1
+                Dim c As Integer = 0
                 For Col As Integer = 0 To NCol - 1
                     If (ElGrid.Rows(0).Cells(Col).Visible) Then
-                        exHoja.Cells.Item(Fila + 2, Col + 1) = ElGrid.Item(Col, Fila).Value
-
+                        exHoja.Cells.Item(Fila + 2, c + 1) = ElGrid.Item(Col, Fila).Value
+                        c += 1
                     End If
 
-
                 Next
-
             Next
 
             'Titulo en negrita, Alineado al centro y que el tamaño de la columna
