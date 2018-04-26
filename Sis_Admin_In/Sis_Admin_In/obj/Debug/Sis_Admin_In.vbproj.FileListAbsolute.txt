@@ -39,3 +39,5 @@ D:\Desa e Imple de Sis\Proyecto\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In
 D:\Desa e Imple de Sis\Proyecto\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In.Respaldo_Restauracion.resources
 D:\Desa e Imple de Sis\Proyecto\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In.Bitacora.resources
 D:\Desa e Imple de Sis\Proyecto\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In.Historico.resources
+E:\8vo Semestre\Git\ProyectoHope\Sis_Admin_In\Sis_Admin_In\bin\Debug\Sis_Admin_In.exe.config
+E:\8vo Semestre\Git\ProyectoHope\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In.xml
