@@ -70,6 +70,7 @@ Partial Class Inicio_Sesion
         '
         Me.txt_usuario.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txt_usuario.Location = New System.Drawing.Point(110, 217)
+        Me.txt_usuario.MaxLength = 15
         Me.txt_usuario.Name = "txt_usuario"
         Me.txt_usuario.Size = New System.Drawing.Size(159, 25)
         Me.txt_usuario.TabIndex = 1
@@ -78,6 +79,7 @@ Partial Class Inicio_Sesion
         '
         Me.txt_cusuario.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txt_cusuario.Location = New System.Drawing.Point(110, 265)
+        Me.txt_cusuario.MaxLength = 15
         Me.txt_cusuario.Name = "txt_cusuario"
         Me.txt_cusuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_cusuario.Size = New System.Drawing.Size(159, 25)

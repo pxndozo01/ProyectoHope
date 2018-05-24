@@ -28,6 +28,8 @@ Partial Class Usuarios
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_id = New System.Windows.Forms.TextBox()
+        Me.USUARIOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InventariO_DBDataSet1 = New Sis_Admin_In.INVENTARIO_DBDataSet()
         Me.txt_usuario = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_contraseña = New System.Windows.Forms.TextBox()
@@ -42,15 +44,15 @@ Partial Class Usuarios
         Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
         Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
         Me.dg_datos = New System.Windows.Forms.DataGridView()
-        Me.InventariO_DBDataSet1 = New Sis_Admin_In.INVENTARIO_DBDataSet()
-        Me.USUARIOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cbTipo = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dg_datos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InventariO_DBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.USUARIOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InventariO_DBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dg_datos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lbl_titulo
@@ -94,6 +96,16 @@ Partial Class Usuarios
         Me.txt_id.Name = "txt_id"
         Me.txt_id.Size = New System.Drawing.Size(100, 27)
         Me.txt_id.TabIndex = 24
+        '
+        'USUARIOSBindingSource
+        '
+        Me.USUARIOSBindingSource.DataMember = "USUARIOS"
+        Me.USUARIOSBindingSource.DataSource = Me.InventariO_DBDataSet1
+        '
+        'InventariO_DBDataSet1
+        '
+        Me.InventariO_DBDataSet1.DataSetName = "INVENTARIO_DBDataSet"
+        Me.InventariO_DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txt_usuario
         '
@@ -215,16 +227,6 @@ Partial Class Usuarios
         Me.dg_datos.Size = New System.Drawing.Size(506, 95)
         Me.dg_datos.TabIndex = 32
         '
-        'InventariO_DBDataSet1
-        '
-        Me.InventariO_DBDataSet1.DataSetName = "INVENTARIO_DBDataSet"
-        Me.InventariO_DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'USUARIOSBindingSource
-        '
-        Me.USUARIOSBindingSource.DataMember = "USUARIOS"
-        Me.USUARIOSBindingSource.DataSource = Me.InventariO_DBDataSet1
-        '
         'IdUsuarioDataGridViewTextBoxColumn
         '
         Me.IdUsuarioDataGridViewTextBoxColumn.DataPropertyName = "idUsuario"
@@ -246,11 +248,33 @@ Partial Class Usuarios
         Me.CUsuarioDataGridViewTextBoxColumn.Name = "CUsuarioDataGridViewTextBoxColumn"
         Me.CUsuarioDataGridViewTextBoxColumn.Width = 175
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(548, 132)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(115, 20)
+        Me.Label4.TabIndex = 33
+        Me.Label4.Text = "Tipo de usuario:"
+        '
+        'cbTipo
+        '
+        Me.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cbTipo.FormattingEnabled = True
+        Me.cbTipo.Items.AddRange(New Object() {"Administrador", "Gerente", "Empleado"})
+        Me.cbTipo.Location = New System.Drawing.Point(552, 171)
+        Me.cbTipo.Name = "cbTipo"
+        Me.cbTipo.Size = New System.Drawing.Size(167, 28)
+        Me.cbTipo.TabIndex = 34
+        '
         'Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(743, 396)
+        Me.Controls.Add(Me.cbTipo)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.dg_datos)
         Me.Controls.Add(Me.btn_salir)
         Me.Controls.Add(Me.btn_grabar)
@@ -269,9 +293,9 @@ Partial Class Usuarios
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Usuarios"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dg_datos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InventariO_DBDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.USUARIOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InventariO_DBDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dg_datos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -300,4 +324,6 @@ Partial Class Usuarios
     Friend WithEvents IdUsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NUsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CUsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label4 As Label
+    Friend WithEvents cbTipo As ComboBox
 End Class

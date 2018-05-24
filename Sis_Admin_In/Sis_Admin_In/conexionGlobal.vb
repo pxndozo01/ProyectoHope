@@ -2,7 +2,10 @@
 
 Module conexionGlobal
     Public servidor As String = "PRO"
-    Public conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
+    Public tipo As String
+    Public primerLogin As Boolean = False
+    Public conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true; MultipleActiveResultSets=True")
+    'Bandera para activar bandera de cerrar sesion
 
 
     Function llenarExcel(ByVal ElGrid As DataGridView) As Boolean
