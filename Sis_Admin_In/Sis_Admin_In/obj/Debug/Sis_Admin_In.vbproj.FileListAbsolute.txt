@@ -81,4 +81,3 @@ C:\Users\Diego\Documents\Hope\ProyectoHope\Sis_Admin_In\Sis_Admin_In\obj\Debug\R
 C:\Users\Diego\Documents\Hope\ProyectoHope\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In.exe
 C:\Users\Diego\Documents\Hope\ProyectoHope\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In.pdb
 C:\Users\Diego\Documents\Hope\ProyectoHope\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In.frmVentasExcel.resources
-C:\Users\Diego\Documents\Hope\ProyectoHope\Sis_Admin_In\Sis_Admin_In\obj\Debug\Sis_Admin_In.cerrarSesion.resources
