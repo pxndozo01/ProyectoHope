@@ -32,15 +32,32 @@
     End Sub
 
     Private Sub Principal_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        Dispose()
-        Inicio_Sesion.Dispose()
+
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Inicio_Sesion.txt_usuario.Text = "admin" Then
+        If tipo.Equals("Administrador") Then
             tsm_usuarios.Visible = True
             UtileriaToolStripMenuItem.Enabled = True
+        ElseIf tipo.Equals("Gerente") Then
+            UtileriaToolStripMenuItem.Enabled = False
+            UtileriaToolStripMenuItem.Enabled = False
+            VentaToolStripMenuItem.Enabled = False
+            EmpleadosToolStripMenuItem.Enabled = False
+        Else
+            tsm_usuarios.Visible = False
+            UtileriaToolStripMenuItem.Enabled = False
+            ExportarAExcelToolStripMenuItem.Enabled = False
+            UtileriaToolStripMenuItem.Enabled = False
+            ReportesToolStripMenuItem.Enabled = False
+            ConsultaToolStripMenuItem1.Enabled = False
+            ConsultaToolStripMenuItem.Enabled = False
+            CompraToolStripMenuItem.Enabled = False
+            MaterialToolStripMenuItem.Enabled = False
+            ProveedoresToolStripMenuItem.Enabled = False
+            EmpleadosToolStripMenuItem.Enabled = False
         End If
+
     End Sub
 
     Private Sub ReportesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem.Click
@@ -64,4 +81,18 @@
     Private Sub HistoricoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoricoToolStripMenuItem.Click
         Historico.ShowDialog()
     End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
+        frmVentasExcel.ShowDialog()
+    End Sub
+
+    Private Sub CerrarSesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesionToolStripMenuItem.Click
+        Dispose()
+        Inicio_Sesion.Visible = True
+        Inicio_Sesion.banSesion = True
+        Inicio_Sesion.txt_usuario.Text = ""
+        Inicio_Sesion.txt_cusuario.Text = ""
+    End Sub
+
 End Class
+

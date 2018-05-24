@@ -63,6 +63,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -98,6 +101,7 @@
     <Compile Include="Compra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="conexionGlobal.vb" />
     <Compile Include="Consulta_Compra.Designer.vb">
       <DependentUpon>Consulta_Compra.vb</DependentUpon>
     </Compile>
@@ -126,6 +130,12 @@
       <DependentUpon>Fecha_Nombre.vb</DependentUpon>
     </Compile>
     <Compile Include="Fecha_Nombre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form de exportaciones\Ventas\frmVentasExcel.Designer.vb">
+      <DependentUpon>frmVentasExcel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form de exportaciones\Ventas\frmVentasExcel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Historico.Designer.vb">
@@ -228,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fecha_Nombre.resx">
       <DependentUpon>Fecha_Nombre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form de exportaciones\Ventas\frmVentasExcel.resx">
+      <DependentUpon>frmVentasExcel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Historico.resx">
       <DependentUpon>Historico.vb</DependentUpon>
@@ -335,6 +348,9 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form de exportaciones\Compras\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

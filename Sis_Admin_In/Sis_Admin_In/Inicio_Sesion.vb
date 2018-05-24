@@ -1,10 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Public Class Inicio_Sesion
-    Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
+    Public banSesion As Boolean = False
+    'Dim conexionsqls2 As New SqlConnection("Data Source ='.'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true")
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
     Private Sub Inicio_Sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        conexionsql.Open()
+
     End Sub
 
     Public Sub btn_aceptar_Click(sender As Object, e As EventArgs) Handles btn_aceptar.Click
@@ -16,22 +17,34 @@ Public Class Inicio_Sesion
                 txt_cusuario.Focus()
             End If
         Else
-            Dim usuario, pass, u, c As String
+            If banSesion Then
+                conexionsql.ConnectionString = ("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true; MultipleActiveResultSets=True")
+                conexionsql.Open()
+                banSesion = False
+
+            Else
+                conexionsql.Open()
+            End If
+
+            Dim usuario, pass, u, c, t As String
             usuario = txt_usuario.Text
             pass = txt_cusuario.Text
             Try
-                comando.CommandText = "SELECT nUsuario,cUsuario FROM USUARIOS WHERE nusuario = '" & usuario & "'"
+                comando.CommandText = "SELECT nUsuario,cUsuario, tipo FROM USUARIOS WHERE nusuario = '" & usuario & "'"
                 lector = comando.ExecuteReader
                 lector.Read()
                 u = lector(0).ToString
                 c = lector(1).ToString
+                t = lector(2).ToString
+
                 lector.Close()
                 If usuario = u And pass = c Then
                     Visible = False
                     conexionsql.Dispose()
                     conexionsql.Close()
                     SqlConnection.ClearAllPools()
-                    Principal.Show()
+                    tipo = t
+                    Principal.ShowDialog()
                 Else
                     MessageBox.Show("Usuario o Contraseña Incorrecto", "¡Error De Informacion!", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If

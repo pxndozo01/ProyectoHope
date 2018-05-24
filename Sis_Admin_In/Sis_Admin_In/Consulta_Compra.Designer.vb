@@ -176,7 +176,7 @@ Partial Class Consulta_Compra
         Me.rb_todos.Checked = True
         Me.rb_todos.Location = New System.Drawing.Point(27, 144)
         Me.rb_todos.Name = "rb_todos"
-        Me.rb_todos.Size = New System.Drawing.Size(67, 24)
+        Me.rb_todos.Size = New System.Drawing.Size(68, 24)
         Me.rb_todos.TabIndex = 4
         Me.rb_todos.TabStop = True
         Me.rb_todos.Text = "Todos"

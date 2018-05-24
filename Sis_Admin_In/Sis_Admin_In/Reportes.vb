@@ -23,7 +23,7 @@ Public Class Reportes
         con.Close()
     End Sub
     Private Sub EmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem.Click
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         Dim comando As New SqlCommand("REPORTEMPLEADO", conexionsql)
         comando.CommandType = CommandType.StoredProcedure
         Dim adaptador As New SqlDataAdapter(comando)
@@ -54,7 +54,7 @@ Public Class Reportes
     End Sub
 
     Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         Dim comando As New SqlCommand("REPORTEPROVEEDOR", conexionsql)
         comando.CommandType = CommandType.StoredProcedure
         Dim adaptador As New SqlDataAdapter(comando)
@@ -72,7 +72,7 @@ Public Class Reportes
     End Sub
 
     Private Sub ProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoToolStripMenuItem.Click
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         Dim comando As New SqlCommand("REPORTEPRODUCTO", conexionsql)
         comando.CommandType = CommandType.StoredProcedure
         Dim adaptador As New SqlDataAdapter(comando)
@@ -92,7 +92,7 @@ Public Class Reportes
     Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
         Fechas.ShowDialog()
         Dim f1, f2 As String
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         f1 = lbl_f1.Text
         f2 = lbl_f2.Text
         Dim cmd As New SqlCommand("FECHAVENTA", conexionsql)
@@ -131,7 +131,7 @@ Public Class Reportes
     End Sub
 
     Private Sub VentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentaToolStripMenuItem.Click
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         Dim comando As New SqlCommand("REPORTEVENTAS", conexionsql)
         comando.CommandType = CommandType.StoredProcedure
         Dim adaptador As New SqlDataAdapter(comando)
@@ -149,7 +149,7 @@ Public Class Reportes
     End Sub
 
     Private Sub ProductosFaltantesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosFaltantesToolStripMenuItem.Click
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         Dim comando As New SqlCommand("PRODUCTOSFALTANTES", conexionsql)
         comando.CommandType = CommandType.StoredProcedure
         Dim adaptador As New SqlDataAdapter(comando)
@@ -167,7 +167,7 @@ Public Class Reportes
     End Sub
 
     Private Sub CompraDetalleProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompraDetalleProductoToolStripMenuItem.Click
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         Dim comando As New SqlCommand("REPORTECOMPRAPRODUCTO", conexionsql)
         comando.CommandType = CommandType.StoredProcedure
         Dim adaptador As New SqlDataAdapter(comando)
@@ -185,7 +185,7 @@ Public Class Reportes
     End Sub
 
     Private Sub ComprasRealizadasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasRealizadasToolStripMenuItem.Click
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         Dim comando As New SqlCommand("REPORTECOMPRA", conexionsql)
         comando.CommandType = CommandType.StoredProcedure
         Dim adaptador As New SqlDataAdapter(comando)
@@ -205,7 +205,7 @@ Public Class Reportes
     Private Sub ProductosCompradosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosCompradosToolStripMenuItem.Click
         Fechas.ShowDialog()
         Dim f1, f2 As String
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         f1 = lbl_f1.Text
         f2 = lbl_f2.Text
         Dim cmd As New SqlCommand("FECHAREPORTECOMPRAPRODUCTO", conexionsql)
@@ -246,7 +246,7 @@ Public Class Reportes
     Private Sub ComprasRealizadasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ComprasRealizadasToolStripMenuItem1.Click
         Fechas.ShowDialog()
         Dim f1, f2 As String
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         f1 = lbl_f1.Text
         f2 = lbl_f2.Text
         Dim cmd As New SqlCommand("FECHAREPORTECOMPRA", conexionsql)
@@ -289,7 +289,7 @@ Public Class Reportes
         Fecha_Nombre.gb_nombre.Text = "Seleccione Empleado"
         Fecha_Nombre.ShowDialog()
         Dim f1, f2, n1 As String
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         f1 = lbl_f1.Text
         f2 = lbl_f2.Text
         n1 = lbl_n1.Text
@@ -339,7 +339,7 @@ Public Class Reportes
         Fecha_Nombre.gb_nombre.Text = "Seleccione Proveedor"
         Fecha_Nombre.ShowDialog()
         Dim f1, f2, n1 As String
-        Dim conexionsql As New SqlConnection("Data Source ='CARDENAS-PC'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
+        Dim conexionsql As New SqlConnection("Data Source ='" & servidor & "'; Initial Catalog = 'INVENTARIO_DB'; Integrated security = true ")
         f1 = lbl_f1.Text
         f2 = lbl_f2.Text
         n1 = lbl_n1.Text

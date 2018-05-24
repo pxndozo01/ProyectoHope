@@ -117,17 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="USUARIOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>484, 15</value>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="USUARIOSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>484, 15</value>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="InventariO_DBDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>306, 15</value>
-  </metadata>
-  <metadata name="InventariO_DBDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>306, 15</value>
+  <metadata name="seleccionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_salir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -167,7 +164,7 @@
         hsYtqk85jwQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_grabar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnGenerar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAABV1JREFUWEetlwtMU1cYx28pIs4YkRjnthiMujkVH4BQebSA2XgEH1syRfHFnEp0
@@ -196,82 +193,40 @@
         CbU7uSD8A4hhoGim+bOvAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_nuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        LxnkXq4d0PeeAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="idVentaV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
+  <metadata name="nombreE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="fechaV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>161, 17</value>
+  <metadata name="nombreP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="CantidadD.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
+  <metadata name="PrecioD.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="marcaP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="unidadP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
+  <metadata name="totalV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <data name="SqlUpdateCommand1.CommandText" xml:space="preserve">
-    <value>UPDATE [USUARIOS] SET [idUsuario] = @idUsuario, [nUsuario] = @nUsuario, [cUsuario] = @cUsuario WHERE (([idUsuario] = @Original_idUsuario) AND ([nUsuario] = @Original_nUsuario) AND ([cUsuario] = @Original_cUsuario));
-SELECT idUsuario, nUsuario, cUsuario FROM USUARIOS WHERE (idUsuario = @idUsuario)</value>
-  </data>
-  <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="seleccionar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>
